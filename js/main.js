@@ -25,4 +25,19 @@ $(document).ready(function () {
             }
         }
     );
+
+    /**
+     * MODAL
+     */
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus : true,
+        autoFocus : false,
+        touch: false,
+        beforeShow: function() {
+            $('html').addClass('fancybox-scroll-disable');
+        },
+        afterClose: function() {
+            $('html').removeClass('fancybox-scroll-disable');
+        }
+    });
 });
